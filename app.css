@@ -77,7 +77,6 @@ ul li {
 	}
 	h3 {
 		font-size: 1.5rem;
-		}
 	}
 }
 @media all and (min-width: 576px) {
@@ -104,5 +103,4 @@ ul li {
 }
 
 @media (min-width: 1400px) {
-	
 }
