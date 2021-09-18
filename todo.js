@@ -5,7 +5,7 @@ function displayList() {
 }
 
 function getInput() {
-	while (input.toLowerCase() !== "quit") {
+	do {
 		input = prompt("What would you like to do?");
 		if (input.toLowerCase() === "add") {
 			input = prompt("Enter item to be added: \n");
@@ -33,5 +33,5 @@ function getInput() {
 		} else {
 			alert("Invalid Usage");
 		}
-	}
+	} while (input.toLowerCase() !== "quit");
 }
