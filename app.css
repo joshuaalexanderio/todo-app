@@ -20,6 +20,8 @@ h1 {
 	text-align: center;
 	font-size: 1rem;
 	padding: 20px 40px 20px 40px;
+	margin-left: 100%;
+	margin-right: 100%;
 }
 h1:hover {
 	transform: scale(1.1);
@@ -60,7 +62,7 @@ ul li {
 
 @media all and (max-width: 575px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		padding: 20px 40px 20px 40px;
 	}
 	ul {
@@ -72,6 +74,10 @@ ul li {
 	}
 	h2 {
 		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+		}
 	}
 }
 @media all and (min-width: 576px) {
@@ -98,4 +104,5 @@ ul li {
 }
 
 @media (min-width: 1400px) {
+	
 }

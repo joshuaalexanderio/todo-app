@@ -31,7 +31,7 @@ function getInput() {
 				}
 			}
 		} else {
-			alert("Invalid Usage");
+			alert("Invalid Usage. Please use single valid command argument.");
 		}
 	} while (input.toLowerCase() !== "quit");
 }
