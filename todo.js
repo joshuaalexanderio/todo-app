@@ -1,5 +1,9 @@
 var input = "";
 var list = [];
+function displayList() {
+	alert("-" + list.join("\n-"));
+}
+
 while (input.toLowerCase() !== "quit") {
 	input = prompt("What would you like to do?");
 	if (input.toLowerCase() === "add") {
@@ -7,7 +11,7 @@ while (input.toLowerCase() !== "quit") {
 		list.push(input);
 		alert("Updated List:\n-" + list.join("\n-"));
 	} else if (input.toLowerCase() === "list") {
-		alert("-" + list.join("\n-"));
+		displayList();
 	} else if (input.toLowerCase() === "remove") {
 		let item = prompt("-" + list.join("\n-") + "\nEnter item to be deleted: \n");
 		list.splice(list.indexOf(item), 1);

@@ -16,13 +16,18 @@ h1 {
 	color: #950740;
 	text-shadow: 1px 1px 1px #6f2232, 1px 1px 1px #6f2232;
 	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
-	transition: all ease-in-out 2s;
+	transition: all ease-in-out 1s;
 	text-align: center;
 	font-size: 1rem;
 	padding: 20px 40px 20px 40px;
 }
 h1:hover {
+	transform: scale(1.1);
 	border-radius: 60% 40% 60% 40% / 30% 50% 50% 40%;
+}
+a {
+	text-decoration: none;
+	color: white;
 }
 .spacer {
 	flex: 2.65;
