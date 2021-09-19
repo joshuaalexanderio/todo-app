@@ -12,6 +12,7 @@ function getInput() {
 			list.push(input);
 			alert("Updated List:\n-" + list.join("\n-"));
 		} else if (input.toLowerCase() === "list") {
+			//
 			displayList();
 		} else if (input.toLowerCase() === "remove") {
 			let item = prompt("-" + list.join("\n-") + "\nEnter item to be deleted: \n");
@@ -30,6 +31,8 @@ function getInput() {
 					}
 				}
 			}
+		} else if (input.toLowerCase() === "quit") {
+			break;
 		} else {
 			alert("Invalid Usage. Please use single valid command argument.");
 		}
