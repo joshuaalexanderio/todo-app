@@ -25,29 +25,27 @@ function sort(list) {
 }
 function getInput() {
 	do {
-		switch (prompt("What would you like to do?")) {
+		input = prompt("What would you like to do?");
+		let command = input.split(" ")[0];
+		let listItem = input.split(" ")[1];
+		switch (command) {
 			case "add":
-				input = prompt("Enter item to be added: \n");
 				//If no input, re-prompt
-				if (input.split(" ").join("") === "") {
+				if (listItem === "") {
 					getInput();
 				}
-				list.push(input); // Add input to end of list array
+				list.push(listItem); // Add input to end of list array
 				alert("Updated List:\n-" + list.join("\n-"));
 				break;
-			case "list":
-				displayList();
-				break;
 			case "remove":
-				let item = prompt(
-					"-" + list.join("\n-") + "\nEnter item to be deleted: \n"
-				);
-				if (list.indexOf(item) === -1) {
-					console.log("It worked");
+				if (list.indexOf(listItem) === -1) {
 					alert("List item does not exist.");
 					break;
 				}
-				list.splice(list.indexOf(item), 1);
+				list.splice(list.indexOf(listItem), 1);
+				break;
+			case "list":
+				displayList();
 				break;
 			case "sort":
 				sort(list);
