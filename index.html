@@ -12,15 +12,12 @@
       <h1><a href="#" onclick="getInput()">To-do!</a></h1>
     </div>
 
-    <h3>Click 'To-do!' to get started</h3>
-    <ul>
-      <h2>Commands</h2>
-      <li>"add [item]" - Add a to-do item</li>
-      <li>"remove [item]" - Remove a specific to-do item</li>
-      <li>"list" - List all to-do items</li>
-      <li>"sort" - Sort all items alphabetically</li>
-      <li>"quit" - Quit app</li>
-    </ul>
+    <main>
+      <input type="text" id="todo-entry" autofocus />
+      <input type="submit" id="add" value="+" onclick="addTodo()" />
+      <ul id="todoList"></ul>
+    </main>
+
     <script type="text/javascript" src="todo.js"></script>
   </body>
 </html>
