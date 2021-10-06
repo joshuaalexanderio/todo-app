@@ -76,8 +76,8 @@ var input = document.getElementById("todo-entry");
 // Add to-do list item
 function addTodo() {
   let node = document.createElement("li");
+  node.className = "todo-item";
   let text = input.value;
-  console.log(`[${text}] added to list.`);
   let textnode = document.createTextNode(text);
   let check = document.createElement("input");
   check.type = "checkbox";
@@ -85,6 +85,7 @@ function addTodo() {
   node.appendChild(check);
   node.appendChild(textnode);
   document.getElementById("todoList").appendChild(node);
+  console.log(`[${text}] added to list.`);
 
   // Remove to-do list item when checkbox clicked
   check.addEventListener("click", function (event) {
@@ -96,7 +97,12 @@ function addTodo() {
     check.parentElement.remove();
   });
 }
-
+function clearTodo() {
+  let nodes = document.querySelectorAll(".todo-item");
+  for (let i = 0; i < nodes.length; i++) {
+    nodes[i].remove();
+  }
+}
 // Add list-item when enter key pressed
 input.addEventListener("keydown", function (event) {
   console.log(event.key);
