@@ -67,12 +67,15 @@ ul {
   display: flex;
   flex-direction: column;
   list-style: none;
+  transition: all 1s ease;
 }
 ul li {
   padding: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: text-decoration 1s ease;
+  text-decoration: none;
 }
 ul li:hover {
   cursor: pointer;
@@ -91,6 +94,15 @@ ul li:hover {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
+#clear {
+  margin: 10px;
+  width: 40%;
+  height: 7%;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #1a1a1d;
+  color: #fdfffc;
+}
 #todo-entry {
   height: 8vh;
   width: 60%;
@@ -100,6 +112,7 @@ ul li:hover {
   color: white;
   text-align: center;
 }
+
 input:focus {
   outline: none;
 }
@@ -134,6 +147,9 @@ input:focus {
   h1 {
     font-size: 4rem;
   }
+  #clear {
+    width: 30%;
+  }
 }
 
 @media all and (min-width: 992px) {
@@ -142,6 +158,9 @@ input:focus {
   }
   #todo-entry {
     width: 30%;
+  }
+  #clear {
+    width: 20%;
   }
 }
 
@@ -152,10 +171,16 @@ input:focus {
   #todo-entry {
     width: 20%;
   }
+  #clear {
+    width: 10%;
+  }
 }
 
 @media (min-width: 1400px) {
   #todo-entry {
     width: 20%;
+  }
+  #clear {
+    width: 8%;
   }
 }
