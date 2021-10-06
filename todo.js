@@ -97,6 +97,8 @@ function addTodo() {
     check.parentElement.remove();
   });
 }
+
+// Clear to-do item
 function clearTodo() {
   let nodes = document.querySelectorAll(".todo-item");
   for (let i = 0; i < nodes.length; i++) {
